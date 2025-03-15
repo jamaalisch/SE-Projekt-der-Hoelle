@@ -1,0 +1,27 @@
+﻿<Window x:Class="SE_Projekt.MitarbeiterUebersicht"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mitarbeiterübersicht" Height="700" Width="1100">
+    <DockPanel LastChildFill="True" Margin="20">
+        <StackPanel Width="250" Background="LightGray" DockPanel.Dock="Left">
+            <TextBlock Text="Personexploit GmbH" FontWeight="Bold" Padding="10"/>
+            <Separator Margin="0,10"/>
+            <Button Content="Dashboard" Click="DashboardButton_Click"/>
+            <Button Content="Stammdaten" Click="StammdatenButton_Click"/>
+            <Button Content="Mitarbeiterübersicht" Click="MitarbeiterübersichtButton_Click"/>
+            <Button Content="Schichtplanung" Click="SchichtplanungButton_Click"/>
+            <Button Content="Arbeitszeiten" Click="ArbeitszeitenButton_Click"/>
+            <Button Content="Urlaub" Click="UrlaubButton_Click"/>
+            <Button Content="PDF" Click="PdfButton_Click"/>
+            <Separator Margin="10,20"/>
+            <Button Content="Zurück zur Login-Seite" Click="ZurückZurLoginButton_Click"/>
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Margin="20">
+                <TextBlock Text="Mitarbeiterübersicht" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+                <DataGrid x:Name="MitarbeiterDataGrid" AutoGenerateColumns="True" Height="400" Margin="0,0,0,10"/>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

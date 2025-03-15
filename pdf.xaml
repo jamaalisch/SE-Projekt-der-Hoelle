@@ -1,0 +1,47 @@
+﻿<Window x:Class="SE_Projekt.LohnabrechnungExport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lohnabrechnung Export" Height="400" Width="700">
+
+    <DockPanel LastChildFill="True" Margin="20">
+        <!-- Seitenleiste mit Buttons -->
+        <StackPanel Width="250" Background="LightGray" DockPanel.Dock="Left">
+            <TextBlock Text="Personexploit GmbH" FontWeight="Bold" Padding="10"/>
+            <Separator Margin="0,10"/>
+            <Button Content="Dashboard" HorizontalAlignment="Stretch" Margin="0,5" Click="DashboardButton_Click"/>
+            <Button Content="Stammdaten" HorizontalAlignment="Stretch" Margin="0,5" Click="StammdatenButton_Click"/>
+            <Button Content="Mitarbeiterübersicht" HorizontalAlignment="Stretch" Margin="0,5" Click="MitarbeiterübersichtButton_Click"/>
+            <Button Content="Schichtplanung" HorizontalAlignment="Stretch" Margin="0,5" Click="SchichtplanungButton_Click"/>
+            <Button Content="Arbeitszeiten" HorizontalAlignment="Stretch" Margin="0,5" Click="ArbeitszeitenButton_Click"/>
+            <Button Content="Urlaub" HorizontalAlignment="Stretch" Margin="0,5" Click="UrlaubButton_Click"/>
+            <Button Content="PDF" HorizontalAlignment="Stretch" Margin="0,5" Click="PdfButton_Click"/>
+
+            <!-- Button zum Zurückkehren zur Login-Seite -->
+            <Separator Margin="10,20"/>
+            <Button Content="Zurück zur Login-Seite" HorizontalAlignment="Stretch" Margin="0,5" Click="ZurückZurLoginButton_Click"/>
+        </StackPanel>
+
+        <!-- Hauptbereich für den Export -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <TextBlock Text="Lohnabrechnung exportieren" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
+            <TextBlock Text="Mitarbeiter auswählen:"/>
+            <ComboBox Name="MitarbeiterComboBox" Width="200" Margin="0,5,0,10"/>
+            <TextBlock Text="Monat auswählen:"/>
+            <ComboBox Name="MonatComboBox" Width="200" Margin="0,5,0,10">
+                <ComboBoxItem Content="Januar"/>
+                <ComboBoxItem Content="Februar"/>
+                <ComboBoxItem Content="März"/>
+                <ComboBoxItem Content="April"/>
+                <ComboBoxItem Content="Mai"/>
+                <ComboBoxItem Content="Juni"/>
+                <ComboBoxItem Content="Juli"/>
+                <ComboBoxItem Content="August"/>
+                <ComboBoxItem Content="September"/>
+                <ComboBoxItem Content="Oktober"/>
+                <ComboBoxItem Content="November"/>
+                <ComboBoxItem Content="Dezember"/>
+            </ComboBox>
+            <Button Content="PDF exportieren" Width="200" Height="35" Background="LightBlue" Click="PdfButton_Click"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

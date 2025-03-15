@@ -1,0 +1,28 @@
+﻿<Window x:Class="SE_Projekt.MitarbeiterDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mitarbeiter Dashboard" Height="600" Width="900">
+
+    <DockPanel LastChildFill="True" Margin="20">
+        <!-- Seitenleiste mit Buttons -->
+        <!-- Seitenleiste mit Navigation -->
+        <StackPanel Width="250" Background="LightGray" DockPanel.Dock="Left">
+            <TextBlock Name="MitarbeiterName" Text="Personexploit GmbH" FontWeight="Bold" Padding="10"/>
+            <Separator Margin="0,10"/>
+            <Button Content="Dashboard" HorizontalAlignment="Stretch" Margin="0,5" Click="DashboardButton_Click"/>
+            <Button Content="Mitarbeiterdaten" HorizontalAlignment="Stretch" Margin="0,5" Click="MitarbeiterdatenButton_Click"/>
+            <Button Content="Schichtplan" HorizontalAlignment="Stretch" Margin="0,5" Click="SchichtplanButton_Click"/>
+            <Button Content="Urlaub" HorizontalAlignment="Stretch" Margin="0,5" Click="UrlaubButton_Click"/>
+
+            <!-- Button zum Zurückkehren zur Login-Seite -->
+            <Separator Margin="10,20"/>
+            <Button Content="Zurück zur Login-Seite" HorizontalAlignment="Stretch" Margin="0,5" Click="ZurückZurLoginButton_Click"/>
+        </StackPanel>
+
+        <!-- Hauptbereich -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Willkommen im Mitarbeiter-Dashboard" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+            <TextBlock Text="Hier können Sie Ihre Daten einsehen und verwalten." FontSize="16"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

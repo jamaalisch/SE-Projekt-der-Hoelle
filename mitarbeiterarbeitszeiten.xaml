@@ -1,0 +1,43 @@
+﻿<Window x:Class="SE_Projekt.MitarbeiterArbeitszeiten"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mitarbeiter Arbeitszeiten" Height="700" Width="1000">
+
+    <DockPanel LastChildFill="True" Margin="20">
+
+        <!-- Seitenleiste mit Navigation -->
+        <StackPanel Width="250" Background="LightGray" DockPanel.Dock="Left">
+            <TextBlock Name="MitarbeiterName" Text="Personexploit GmbH" FontWeight="Bold" Padding="10"/>
+            <Separator Margin="0,10"/>
+            <Button Content="Dashboard" HorizontalAlignment="Stretch" Margin="0,5" Click="DashboardButton_Click"/>
+            <Button Content="Mitarbeiterdaten" HorizontalAlignment="Stretch" Margin="0,5" Click="MitarbeiterdatenButton_Click"/>
+            <Button Content="Schichtplan" HorizontalAlignment="Stretch" Margin="0,5" Click="SchichtplanButton_Click"/>
+            <Button Content="Urlaub" HorizontalAlignment="Stretch" Margin="0,5" Click="UrlaubButton_Click"/>
+
+            <!-- Button zum Zurückkehren zur Login-Seite -->
+            <Separator Margin="10,20"/>
+            <Button Content="Zurück zur Login-Seite" HorizontalAlignment="Stretch" Margin="0,5" Click="ZurückZurLoginButton_Click"/>
+        </StackPanel>
+
+        <!-- Hauptbereich mit den Arbeitszeiten für den Mitarbeiter -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <DockPanel LastChildFill="True">
+
+                <!-- Rechte Seite: Übersicht der geleisteten Arbeitszeiten pro Monat -->
+                <StackPanel DockPanel.Dock="Right" Width="600" Margin="20">
+                    <TextBlock Text="Monatliche Arbeitszeiten Übersicht" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                    <!-- DataGrid für die Schichtplan-Daten -->
+                    <DataGrid x:Name="MonatlicheArbeitszeitenDataGrid" Width="550" Height="400" AutoGenerateColumns="True">
+                        <!-- Spalten werden jetzt automatisch generiert -->
+                    </DataGrid>
+
+                    <!-- Button zum Anzeigen der Übersicht -->
+                    <Button Content="Daten aktualisieren" Width="200" Height="40" Background="LightBlue" Margin="0,20,0,0" HorizontalAlignment="Left" Click="DatenAktualisierenButton_Click"/>
+                </StackPanel>
+
+            </DockPanel>
+        </ScrollViewer>
+
+    </DockPanel>
+</Window>

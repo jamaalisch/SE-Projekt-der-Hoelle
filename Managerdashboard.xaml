@@ -1,0 +1,58 @@
+﻿<Window x:Class="SE_Projekt.Managerseite"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Managerdashboard" Height="600" Width="900">
+
+    <DockPanel LastChildFill="True" Margin="20">
+
+        <!-- Seitenleiste mit Buttons -->
+        <StackPanel Width="250" Background="LightGray" DockPanel.Dock="Left">
+            <TextBlock Text="Personexploit GmbH" FontWeight="Bold" Padding="10"/>
+            <Separator Margin="0,10"/>
+            <Button Content="Dashboard" HorizontalAlignment="Stretch" Margin="0,5" Click="DashboardButton_Click"/>
+            <Button Content="Stammdaten" HorizontalAlignment="Stretch" Margin="0,5" Click="StammdatenButton_Click"/>
+            <Button Content="Mitarbeiterübersicht" HorizontalAlignment="Stretch" Margin="0,5" Click="MitarbeiterübersichtButton_Click"/>
+            <Button Content="Schichtplanung" HorizontalAlignment="Stretch" Margin="0,5" Click="SchichtplanungButton_Click"/>
+            <Button Content="Arbeitszeiten" HorizontalAlignment="Stretch" Margin="0,5" Click="ArbeitszeitenButton_Click"/>
+            <Button Content="Urlaub" HorizontalAlignment="Stretch" Margin="0,5" Click="UrlaubButton_Click"/>
+            <Button Content="PDF" HorizontalAlignment="Stretch" Margin="0,5" Click="PdfButton_Click"/>
+
+            <!-- Button zum Zurückkehren zur Login-Seite -->
+            <Separator Margin="10,20"/>
+            <Button Content="Zurück zur Login-Seite" HorizontalAlignment="Stretch" Margin="0,5" Click="ZurückZurLoginButton_Click"/>
+        </StackPanel>
+
+        <!-- Hauptbereich mit drei Sektionen -->
+        <StackPanel Orientation="Vertical" Margin="20">
+
+            <!-- Stammdaten -->
+            <Border CornerRadius="8" Padding="16" Background="White" Margin="0,0,0,20" Width="440">
+                <StackPanel>
+                    <TextBlock Text="Stammdaten angeben" FontSize="18" FontWeight="Bold" />
+                    <TextBlock Text="Tragen Sie Stammdaten zu Ihrem Unternehmen ein oder passen Sie diese an." />
+                    <Button Content="Start" Width="100" HorizontalAlignment="Left" Margin="0,10,0,0" Click="StartButton_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Mitarbeiter anlegen -->
+            <Border CornerRadius="8" Padding="16" Background="White" Margin="0,0,0,20" Width="440">
+                <StackPanel>
+                    <TextBlock Text="Neuen Mitarbeiter anlegen" FontSize="18" FontWeight="Bold" />
+                    <TextBlock Text="Fügen Sie einen neuen Mitarbeiter zu Ihrem Unternehmen hinzu." />
+                    <Button Content="Start" Width="100" HorizontalAlignment="Left" Margin="0,10,0,0" Click="MitarbeiterAnlegenButton_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Neuer Kasten: Arbeitszeitbetrug -->
+            <Border CornerRadius="8" Padding="16" Background="White" Width="440">
+                <StackPanel>
+                    <TextBlock Text="Arbeitszeitbetrug begehen" FontSize="18" FontWeight="Bold" Foreground="Red"/>
+                    <TextBlock Text="Manipulieren Sie Ihre Arbeitszeiten für maximalen Profit." />
+                    <Button Content="Los geht's!" Width="100" HorizontalAlignment="Left" Margin="0,10,0,0" Click="ArbeitszeitbetrugButton_Click"/>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+
+    </DockPanel>
+</Window>

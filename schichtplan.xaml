@@ -1,0 +1,55 @@
+﻿<Window x:Class="SE_Projekt.Schichtplanung"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Schichtplanung" Height="800" Width="1000">
+    <DockPanel LastChildFill="True" Margin="20">
+        <!-- Seitenleiste mit Buttons -->
+        <StackPanel Width="250" Background="LightGray" DockPanel.Dock="Left">
+            <TextBlock Text="Personexploit GmbH" FontWeight="Bold" Padding="10"/>
+            <Separator Margin="0,10"/>
+            <Button Content="Dashboard" HorizontalAlignment="Stretch" Margin="0,5" Click="DashboardButton_Click"/>
+            <Button Content="Stammdaten" HorizontalAlignment="Stretch" Margin="0,5" Click="StammdatenButton_Click"/>
+            <Button Content="Mitarbeiterübersicht" HorizontalAlignment="Stretch" Margin="0,5" Click="MitarbeiterübersichtButton_Click"/>
+            <Button Content="Schichtplanung" HorizontalAlignment="Stretch" Margin="0,5" Click="SchichtplanungButton_Click"/>
+            <Button Content="Arbeitszeiten" HorizontalAlignment="Stretch" Margin="0,5" Click="ArbeitszeitenButton_Click"/>
+            <Button Content="Urlaub" HorizontalAlignment="Stretch" Margin="0,5" Click="UrlaubButton_Click"/>
+            <Button Content="PDF" HorizontalAlignment="Stretch" Margin="0,5" Click="PdfButton_Click"/>
+            <Separator Margin="10,20"/>
+            <Button Content="Zurück zur Login-Seite" HorizontalAlignment="Stretch" Margin="0,5" Click="ZurückZurLoginButton_Click"/>
+        </StackPanel>
+
+        <!-- Hauptinhalt -->
+        <StackPanel Orientation="Vertical" Width="Auto" Margin="20">
+            <TextBlock Text="Schichtplanung" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+
+            <!-- Datum auswählen -->
+            <TextBlock Text="Datum auswählen" FontWeight="Bold" Margin="10,0,0,5"/>
+            <Calendar Name="CalendarControl" Margin="10" />
+
+            <!-- Mitarbeiter Auswahl -->
+            <TextBlock Text="Mitarbeiter auswählen" FontWeight="Bold" Margin="10,0,0,5"/>
+            <ComboBox Name="MitarbeiterComboBox" Width="200" DisplayMemberPath="Nachname" Margin="10"/>
+
+            <!-- Schichtbeginn Eingabe -->
+            <TextBlock Text="Schichtbeginn eingeben (HHMM)" FontWeight="Bold" Margin="10,0,0,5"/>
+            <TextBox Name="SchichtbeginnTextBox" Width="100" Margin="10,0,0,0"/>
+
+            <!-- Schichtende Eingabe -->
+            <TextBlock Text="Schichtende eingeben (HHMM)" FontWeight="Bold" Margin="10,0,0,5"/>
+            <TextBox Name="SchichtendeTextBox" Width="100" Margin="10,0,0,0"/>
+
+            <!-- Schicht speichern Button -->
+            <Button Content="Schicht speichern" Width="200" Height="35" Background="LightBlue" Click="SpeichernButton_Click" Margin="10,0,0,0"/>
+
+            <!-- Tabelle für geplante Schichten -->
+            <DataGrid Name="SchichtplanTabelle" AutoGenerateColumns="False" Height="200" Margin="20,20,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Datum" Binding="{Binding Datum}" Width="*"/>
+                    <DataGridTextColumn Header="Mitarbeiter" Binding="{Binding Mitarbeiter.Nachname}" Width="*"/>
+                    <DataGridTextColumn Header="Schichtbeginn" Binding="{Binding Schichtbeginn}" Width="*"/>
+                    <DataGridTextColumn Header="Schichtende" Binding="{Binding Schichtende}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </DockPanel>
+</Window>

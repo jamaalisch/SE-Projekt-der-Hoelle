@@ -1,0 +1,104 @@
+﻿<Window x:Class="SE_Projekt.MitarbeiterDaten"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mitarbeiterdaten" Height="700" Width="1100">
+
+    <DockPanel LastChildFill="True" Margin="20">
+        <!-- Seitenleiste mit Buttons -->
+        <StackPanel Width="250" Background="LightGray" DockPanel.Dock="Left">
+            <TextBlock Name="MitarbeiterName" Text="Personexploit GmbH" FontWeight="Bold" Padding="10"/>
+            <Separator Margin="0,10"/>
+            <Button Content="Dashboard" HorizontalAlignment="Stretch" Margin="0,5" Click="DashboardButton_Click"/>
+            <Button Content="Mitarbeiterdaten" HorizontalAlignment="Stretch" Margin="0,5" Click="MitarbeiterdatenButton_Click"/>
+            <Button Content="Schichtplan" HorizontalAlignment="Stretch" Margin="0,5" Click="SchichtplanButton_Click"/>
+            <Button Content="Urlaub" HorizontalAlignment="Stretch" Margin="0,5" Click="UrlaubButton_Click"/>
+            <Separator Margin="10,20"/>
+            <Button Content="Zurück zur Login-Seite" HorizontalAlignment="Stretch" Margin="0,5" Click="ZurückZurLoginButton_Click"/>
+        </StackPanel>
+
+        <!-- Hauptbereich -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Margin="20">
+                <TextBlock Text="Ihre Mitarbeiterdaten" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Anrede" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="AnredeText" Width="200"/>
+                    <TextBlock Text="Geburtsdatum" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="GeburtsdatumText" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Vorname" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="VornameText" Width="200"/>
+                    <TextBlock Text="Nachname" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="NachnameText" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Geburtsort" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="GeburtsortText" Width="200"/>
+                    <TextBlock Text="Nationalität" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="NationalitätText" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Position" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="PositionText" Width="200"/>
+                    <TextBlock Text="Einstellungsdatum" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="EinstellungsdatumText" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Familienstand" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="FamilienstandText" Width="200"/>
+                    <TextBlock Text="Stundenlohn" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="StundenlohnText" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Email" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="EmailText" Width="200"/>
+                    <TextBlock Text="Mobil" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="MobilText" Width="200"/>
+                </StackPanel>
+
+                <TextBlock Text="Adresse" FontSize="20" FontWeight="Bold" Margin="0,20,0,10"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Straße" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="StraßeText" Width="200"/>
+                    <TextBlock Text="PLZ" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="PLZText" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Ort" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="OrtText" Width="200"/>
+                    <TextBlock Text="Land" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="LandText" Width="200"/>
+                </StackPanel>
+
+                <TextBlock Text="Bankverbindung + Steuer" FontSize="20" FontWeight="Bold" Margin="0,20,0,10"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="IBAN" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="IBANText" Width="200"/>
+                    <TextBlock Text="BIC" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="BICText" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Steuerklasse" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="SteuerklasseText" Width="200"/>
+                    <TextBlock Text="Konfession" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBlock x:Name="KonfessionText" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="SteuerID" FontWeight="Bold" Width="150"/>
+                    <TextBlock x:Name="SteuerIDText" Width="200"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

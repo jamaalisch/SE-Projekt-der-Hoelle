@@ -1,0 +1,107 @@
+﻿<Window x:Class="SE_Projekt.MitarbeiterAnlegen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Neuer Mitarbeiter anlegen" Height="700" Width="1100">
+
+    <DockPanel LastChildFill="True" Margin="20">
+        <StackPanel Width="250" Background="LightGray" DockPanel.Dock="Left">
+            <TextBlock Text="Personexploit GmbH" FontWeight="Bold" Padding="10"/>
+            <Separator Margin="0,10"/>
+            <Button Content="Dashboard" Click="DashboardButton_Click"/>
+            <Button Content="Stammdaten" Click="StammdatenButton_Click"/>
+            <Button Content="Mitarbeiterübersicht" Click="MitarbeiterübersichtButton_Click"/>
+            <Button Content="Schichtplanung" Click="SchichtplanungButton_Click"/>
+            <Button Content="Arbeitszeiten" Click="ArbeitszeitenButton_Click"/>
+            <Button Content="Urlaub" Click="UrlaubButton_Click"/>
+            <Button Content="PDF" Click="PdfButton_Click"/>
+            <Separator Margin="10,20"/>
+            <Button Content="Zurück zur Login-Seite" Click="ZurückZurLoginButton_Click"/>
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Margin="20">
+                <TextBlock Text="Mitarbeiterdaten" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Anrede" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="AnredeComboBox" Width="200">
+                    </TextBox>
+                    <TextBlock Text="Geburtsdatum" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <DatePicker x:Name="GeburtsdatumPicker" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Vorname" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="VornameTextBox" Width="200"/>
+                    <TextBlock Text="Nachname" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBox x:Name="NachnameTextBox" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Geburtsort" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="GeburtsortTextBox" Width="200"/>
+                    <TextBlock Text="Nationalität" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBox x:Name="NationalitätTextBox" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Position" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="PositionTextBox" Width="200"/>
+                    <TextBlock Text="Einstellungsdatum" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <DatePicker x:Name="EinstellungsdatumPicker" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Familienstand" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="FamilienstandTextBox" Width="200"/>
+                    <TextBlock Text="Stundenlohn" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBox x:Name="StundenlohnTextBox" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Email" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="EmailTextBox" Width="200"/>
+                    <TextBlock Text="Mobil" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBox x:Name="MobilTextBox" Width="200"/>
+                </StackPanel>
+
+                <TextBlock Text="Adresse" FontSize="20" FontWeight="Bold" Margin="0,20,0,10"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Straße" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="StraßeTextBox" Width="200"/>
+                    <TextBlock Text="PLZ" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBox x:Name="PLZTextBox" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Ort" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="OrtTextBox" Width="200"/>
+                    <TextBlock Text="Land" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBox x:Name="LandTextBox" Width="200"/>
+                </StackPanel>
+
+                <TextBlock Text="Bankverbindung + Steuer" FontSize="20" FontWeight="Bold" Margin="0,20,0,10"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="IBAN" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="IBANTextBox" Width="200"/>
+                    <TextBlock Text="BIC" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBox x:Name="BICTextBox" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Steuerklasse" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="SteuerklasseTextBox" Width="200"/>
+                    <TextBlock Text="Konfession" FontWeight="Bold" Width="150" Margin="20,0,0,0"/>
+                    <TextBox x:Name="KonfessionTextBox" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="SteuerID" FontWeight="Bold" Width="150"/>
+                    <TextBox x:Name="SteuerIDTextBox" Width="200"/>
+                </StackPanel>
+
+                <Button Content="Hinzufügen" Width="200" Height="40" Background="LightBlue" Margin="0,20,0,0" Click="HinzufügenButton_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
